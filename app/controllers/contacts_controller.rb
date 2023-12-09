@@ -13,4 +13,8 @@ class ContactsController < ApplicationController
     @contact = Contact.first
     render template: "contacts/show"
   end
+  def show_contacts
+    @contacts = Contact.all
+    render template: "contacts/index"
+  end
 end
