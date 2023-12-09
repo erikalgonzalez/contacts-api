@@ -9,4 +9,8 @@ class ContactsController < ApplicationController
       phone_number: contact.phone_number,
     }
   end
+  def show_contacts
+    @contact = Contact.first
+    render template: "contacts/show"
+  end
 end
